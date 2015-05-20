@@ -19,7 +19,7 @@ gulp webserver
 
 ### How the installation works
 
-The installation will create all necessary and translated files into the folder 'build' and its substructure.
+The installation will create all necessary and translated files into the folder 'dist' and its substructure.
 
 ### I want more of Angular
 * Check out [the official Angular website](https://angularjs.org).
