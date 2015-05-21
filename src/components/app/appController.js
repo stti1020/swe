@@ -28,7 +28,9 @@
 
                 {path: '/detailsKunde', component: 'detailsKunde'},
                 {path: '/listKunden', component: 'listKunden'},
+                {path: '/registrieren', component: 'registrieren'},
                 {path: '/registrierePrivatkunde', component: 'registrierePrivatkunde'},
+                {path: '/registriereFirmenkunde', component: 'registriereFirmenkunde'},
                 {path: '/updateKunde', component: 'updateKunde'}
             ]);
         }

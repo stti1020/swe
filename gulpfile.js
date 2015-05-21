@@ -57,13 +57,15 @@ var gulp = require('gulp'),
             dir.components + '/kundenverwaltung/kundeBestellungenService.js',
             dir.components + '/kundenverwaltung/detailsKunde/detailsKundeController.js',
             dir.components + '/kundenverwaltung/listKunden/listKundenController.js',
+            dir.components + '/kundenverwaltung/registrieren/registrierenController.js',
             dir.components + '/kundenverwaltung/registrierePrivatkunde/registrierePrivatkundeController.js',
+            dir.components + '/kundenverwaltung/registriereFirmenkunde/registriereFirmenkundeController.js',
             dir.components + '/kundenverwaltung/updateKunde/updateKundeController.js',
             dir.components + '/app/app.js',
             dir.components + '/app/headerController.js',
             dir.components + '/app/navController.js',
             dir.components + '/app/componentLoaderConfig.js',
-            dir.components + '/app/appController.js'
+            dir.components + '/app/appController.js',
         ],
         jsOther: [
             dir.bower + '/angular/*.min.js',
@@ -290,7 +292,7 @@ gulp.task('webserver', function() {
         // Admin-Oberflaeche durch http://localhost:3001 wird deaktiviert
         ui: false,
         // 'default', 'firefox', 'chrome'
-        browser: 'chrome'
+        browser: 'safari'
 
         // Weitere Defaultwerte:
         // port: 3000

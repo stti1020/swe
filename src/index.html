@@ -114,10 +114,10 @@
     </head>
 
 	<body ng-app="app" ng-strict-di ng-controller="AppController as app">
-        <header ng-include="'components/...html'"></header>
-        <nav ng-include="'components/home/navbar.html'"></nav>
+        <header ng-include="'components/app/header.html'"></header>
+        <nav ng-include="'components/app/navbar.html'"></nav>
         <main ng-viewport></main>
-        <footer ng-include="'components/...html'"></footer>
+        <footer ng-include="'components/app/footer.html'"></footer>
 
         <!--
         <script src="/js/traceur-runtime.js"></script>
@@ -135,5 +135,6 @@
         <!-- http://momentjs.com/docs -->
         <script src="/js/moment-with-locales.min.js"></script>
         <script src="/js/shop.min.js"></script>
+
     </body>
 </html>

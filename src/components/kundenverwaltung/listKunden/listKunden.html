@@ -1,0 +1,19 @@
+<h1>Unsere Kunden</h1>
+<div ng-controller='listKundenController as listKunden'>
+<table class="table table-bordered" ng-repeat="kunde in listKunden.kunden">
+<tr>
+<td>
+{{ kunde.id }}
+</td>
+<td>
+{{ kunde.identity.email }}
+</td>
+<td>
+{{ kunde.identity.nachname }}
+</td>
+<td>
+<a href="{{ kunde.bestellungenUri }}">Bestellungen des Kunden</a>
+</td>
+</tr>
+</table>
+</div>

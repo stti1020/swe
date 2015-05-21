@@ -44,6 +44,8 @@
                 case 'detailsKunde':
                 case 'listKunden':
                 case 'registrierePrivatkunde':
+                case 'registriereFirmenkunde':
+                case 'registrieren':
                 case 'updateKunde':
                     subdir = 'kundenverwaltung/';
                     break;

@@ -284,6 +284,77 @@ angular.module('appBestellverwaltung', ['appArtikelverwaltung']);
 
 angular.module('appKundenverwaltung', ['appUtil']);
 /**
+ * @namespace listKunden
+ */
+
+/* global angular: false */
+/*jslint es6: true */
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+(function () {
+    'use strict';
+
+    /**
+     * @class appKundenverwaltung.listKundenController
+     */
+
+    var listKundenController = function listKundenController() {
+        _classCallCheck(this, listKundenController);
+
+        this.kunden = [{
+            'type': 'F',
+            'version': 0,
+            'id': 300,
+            'identity': {
+                'loginname': 'admin',
+                'enabled': true,
+                'nachname': 'Admin',
+                'email': 'admin@hs-karlsruhe.de',
+                'adresse': {
+                    'plz': '76133',
+                    'ort': 'Karlsruhe',
+                    'strasse': 'Moltkeweg',
+                    'hausnr': '1'
+                }
+            },
+            'kategorie': 1,
+            'seit': '2014-02-01',
+            'newsletter': false,
+            'agbAkzeptiert': true,
+            'bestellungenUri': 'https://localhost:8443/shop/rest/bestellungen/kunde/300'
+        }, {
+            'type': 'F',
+            'version': 0,
+            'id': 300,
+            'identity': {
+                'loginname': 'admin',
+                'enabled': true,
+                'nachname': 'Admin',
+                'email': 'admin@hs-karlsruhe.de',
+                'adresse': {
+                    'plz': '76133',
+                    'ort': 'Karlsruhe',
+                    'strasse': 'Moltkeweg',
+                    'hausnr': '1'
+                }
+            },
+            'kategorie': 1,
+            'seit': '2014-02-01',
+            'newsletter': false,
+            'agbAkzeptiert': true,
+            'bestellungenUri': 'https://localhost:8443/shop/rest/bestellungen/kunde/300'
+        }];
+    };
+
+    // "Property Annotation" fuer DI: fuer den Modus 'strict' und fuer Minification
+    listKundenController.$inject = [];
+
+    /* global angular: false */
+    angular.module('appKundenverwaltung').controller('listKundenController', listKundenController);
+})();
+/**
  * @namespace app
  */
 
@@ -348,6 +419,8 @@ angular.module('appKundenverwaltung', ['appUtil']);
                 case 'detailsKunde':
                 case 'listKunden':
                 case 'registrierePrivatkunde':
+                case 'registriereFirmenkunde':
+                case 'registrieren':
                 case 'updateKunde':
                     subdir = 'kundenverwaltung/';
                     break;
@@ -390,7 +463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         console.info('AppController CREATED');
 
-        $router.config([{ path: '/', redirectTo: '/home' }, { path: '/home', component: 'home' }, { path: '/createArtikel', component: 'createArtikel' }, { path: '/listArtikel', component: 'listArtikel' }, { path: '/warenkorb', component: 'warenkorb' }, { path: '/bestaetigung', component: 'bestaetigung' }, { path: '/detailsKunde', component: 'detailsKunde' }, { path: '/listKunden', component: 'listKunden' }, { path: '/registrierePrivatkunde', component: 'registrierePrivatkunde' }, { path: '/updateKunde', component: 'updateKunde' }]);
+        $router.config([{ path: '/', redirectTo: '/home' }, { path: '/home', component: 'home' }, { path: '/createArtikel', component: 'createArtikel' }, { path: '/listArtikel', component: 'listArtikel' }, { path: '/warenkorb', component: 'warenkorb' }, { path: '/bestaetigung', component: 'bestaetigung' }, { path: '/detailsKunde', component: 'detailsKunde' }, { path: '/listKunden', component: 'listKunden' }, { path: '/registrieren', component: 'registrieren' }, { path: '/registrierePrivatkunde', component: 'registrierePrivatkunde' }, { path: '/registriereFirmenkunde', component: 'registriereFirmenkunde' }, { path: '/updateKunde', component: 'updateKunde' }]);
     };
 
     // "Property Annotation" fuer DI: fuer den Modus 'strict' und fuer Minification
