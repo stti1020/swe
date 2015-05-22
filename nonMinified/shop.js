@@ -469,6 +469,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /*jslint es6: true */
 'use strict';
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 (function () {
@@ -479,16 +481,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      * @desc Controller, um das Routing zu konfigurieren
      */
 
-    var AppController = function AppController($router) {
-        _classCallCheck(this, AppController);
+    var AppController = (function () {
+        function AppController($router, $location) {
+            _classCallCheck(this, AppController);
 
-        console.info('AppController CREATED');
+            console.info('AppController CREATED');
 
-        $router.config([{ path: '/', redirectTo: '/home' }, { path: '/home', component: 'home' }, { path: '/createArtikel', component: 'createArtikel' }, { path: '/listArtikel', component: 'listArtikel' }, { path: '/warenkorb', component: 'warenkorb' }, { path: '/bestaetigung', component: 'bestaetigung' }, { path: '/detailsKunde', component: 'detailsKunde' }, { path: '/listKunden', component: 'listKunden' }, { path: '/registrieren', component: 'registrieren' }, { path: '/registrierePrivatkunde', component: 'registrierePrivatkunde' }, { path: '/registriereFirmenkunde', component: 'registriereFirmenkunde' }, { path: '/updateKunde', component: 'updateKunde' }]);
-    };
+            this.loc = $location;
+
+            $router.config([{ path: '/', redirectTo: '/home' }, { path: '/home', component: 'home' }, { path: '/createArtikel', component: 'createArtikel' }, { path: '/listArtikel', component: 'listArtikel' }, { path: '/warenkorb', component: 'warenkorb' }, { path: '/bestaetigung', component: 'bestaetigung' }, { path: '/detailsKunde', component: 'detailsKunde' }, { path: '/listKunden', component: 'listKunden' }, { path: '/registrieren', component: 'registrieren' }, { path: '/registrierePrivatkunde', component: 'registrierePrivatkunde' }, { path: '/registriereFirmenkunde', component: 'registriereFirmenkunde' }, { path: '/updateKunde', component: 'updateKunde' }]);
+        }
+
+        _createClass(AppController, [{
+            key: 'isActive',
+            value: function isActive(checkPath) {
+                return checkPath === this.loc.url();
+            }
+        }]);
+
+        return AppController;
+    })();
 
     // "Property Annotation" fuer DI: fuer den Modus 'strict' und fuer Minification
-    AppController.$inject = ['$router'];
+    AppController.$inject = ['$router', '$location'];
 
     /* global angular: false */
     angular.module('app').controller('AppController', AppController);

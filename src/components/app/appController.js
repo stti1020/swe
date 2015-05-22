@@ -12,8 +12,10 @@
      * @desc Controller, um das Routing zu konfigurieren
      */
     class AppController {
-        constructor($router) {
+        constructor($router, $location) {
             console.info('AppController CREATED');
+
+            this.loc = $location;
 
             $router.config([
                 {path: '/', redirectTo: '/home'},
@@ -34,10 +36,13 @@
                 {path: '/updateKunde', component: 'updateKunde'}
             ]);
         }
+        isActive(checkPath) {
+            return checkPath === this.loc.url();
+       }
     }
 
     // "Property Annotation" fuer DI: fuer den Modus 'strict' und fuer Minification
-    AppController.$inject = ['$router'];
+    AppController.$inject = ['$router', '$location'];
 
     /* global angular: false */
     angular.module('app').controller('AppController', AppController);
