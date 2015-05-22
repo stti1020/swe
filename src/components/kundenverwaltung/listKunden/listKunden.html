@@ -1,19 +1,23 @@
 <h1>Unsere Kunden</h1>
+<label>Suche: <input ng-model="searchKunden"></label>
 <div ng-controller='listKundenController as listKunden'>
-<table class="table table-bordered" ng-repeat="kunde in listKunden.kunden">
-<tr>
-<td>
-{{ kunde.id }}
-</td>
-<td>
-{{ kunde.identity.email }}
-</td>
-<td>
-{{ kunde.identity.nachname }}
-</td>
-<td>
-<a href="{{ kunde.bestellungenUri }}">Bestellungen des Kunden</a>
-</td>
-</tr>
+<table class="table table-bordered" ng-repeat="kunde in listKunden.kunden | filter:searchKunden">
+    <tr>
+        <td>
+            {{ kunde.id }}
+        </td>
+        <td>
+            {{ kunde.identity.email }}
+        </td>
+        <td>
+            {{ kunde.identity.nachname }}
+        </td>
+        <td>
+             <a href="{{ kunde.bestellungenUri }}">Bestellungen des Kunden</a>
+        </td>
+        <td>
+            {{ kunde.seit | date : format : 'longDate' }}
+        </td>
+    </tr>
 </table>
 </div>
