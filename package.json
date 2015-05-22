@@ -60,7 +60,6 @@
     "karma-firefox-launcher": "^0.1.4",
     "karma-jasmine": "^0.3.5",
     "protractor": "^2.0.0",
-    "shelljs": "^0.4.0",
-    "typescript": "git://github.com/mhegazy/typescript.git#v1.5-beta2"
+    "shelljs": "^0.4.0"
   }
 }

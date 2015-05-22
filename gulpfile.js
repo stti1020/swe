@@ -292,7 +292,7 @@ gulp.task('webserver', function() {
         // Admin-Oberflaeche durch http://localhost:3001 wird deaktiviert
         ui: false,
         // 'default', 'firefox', 'chrome'
-        browser: 'safari'
+        browser: 'chrome'
 
         // Weitere Defaultwerte:
         // port: 3000

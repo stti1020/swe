@@ -42,7 +42,6 @@
     "bootstrap": "~3.3.4",
     "fontawesome": "~4.3.0",
     "lodash": "~3.8.0",
-    "material-design-icons": "~1.0.1",
     "moment": "~2.10.2",
     "systemjs": "systemjs/systemjs#0.16.11",
     "traceur": "~0.0.88"
