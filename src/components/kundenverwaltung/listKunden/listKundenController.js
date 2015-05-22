@@ -12,7 +12,7 @@
      */
     class listKundenController {
         constructor() {
-        	this.kunden = [{
+            this.kunden = [{
         'type': 'F',
         'version': 0,
         'id': 300,
@@ -33,7 +33,7 @@
         'newsletter': false,
         'agbAkzeptiert': true,
         'bestellungenUri': 'https://localhost:8443/shop/rest/bestellungen/kunde/300'
-    },{
+    }, {
         'type': 'P',
         'version': 0,
         'id': 301,
@@ -54,7 +54,7 @@
         'newsletter': false,
         'agbAkzeptiert': true,
         'bestellungenUri': 'https://localhost:8443/shop/rest/bestellungen/kunde/301'
-    },{
+    }, {
         'type': 'P',
         'version': 0,
         'id': 302,
